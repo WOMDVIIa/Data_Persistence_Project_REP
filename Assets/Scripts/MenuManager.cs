@@ -32,6 +32,14 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void ResetScore()
+    {
+        GameManager.instance.bestPlayer = "";
+        GameManager.instance.bestScore = 0;
+        GameManager.instance.SaveGame();
+        Start();
+    }
+
     public void QuitGame()
     {
 
